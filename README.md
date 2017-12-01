@@ -1,2 +1,2 @@
 # ML101
-This part and commit was done by Ununtu environment of Windows
+This part and commit was done by Ubuntu environment of Windows
