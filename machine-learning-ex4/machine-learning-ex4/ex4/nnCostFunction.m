@@ -80,15 +80,14 @@ d2 = (d3 * Theta2) .* a2 .* (1 - a2);
 % d1 = (d2 * Theta1) .* a1 .* (1 - a1);
 Theta2_grad = d3' * a2;
 Theta1_grad = d2(:,2:end)' * a1;
-
 Theta1_grad = Theta1_grad/m;
 Theta2_grad = Theta2_grad/m;
-temp1 = Theta1*lambda/m;
-temp2 = Theta2*lambda/m;
-temp1(:,1) = 0;
-temp2(:,1) = 0;
-Theta1_grad = Theta1_grad + temp1;
-Theta2_grad = Theta2_grad + temp2;
+regularised1 = Theta1*lambda/m;
+regularised2 = Theta2*lambda/m;
+regularised(:,1) = 0;
+regularised(:,1) = 0;
+Theta1_grad = Theta1_grad + regularised1;
+Theta2_grad = Theta2_grad + regularised2;
 
 
 % -------------------------------------------------------------
