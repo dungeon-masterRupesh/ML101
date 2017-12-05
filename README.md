@@ -22,10 +22,10 @@ J = J*(-1/m);
 J = J + (lambda/(2*m))*(norm(Theta1,'fro')^2 ...
     + norm(Theta2,'fro')^2 - norm(Theta1(:,1),'fro')^2 - norm(Theta2(:,1),'fro')^2);
 %%%%%%%%%%%%%%%%%%%%
-d3 = h - y_logic;
+d3 = h - y_logic; %each layers delta for all data points
 d2 = (d3 * Theta2) .* a2 .* (1 - a2);
 % d1 = (d2 * Theta1) .* a1 .* (1 - a1);
-Theta2_grad = d3' * a2;
+Theta2_grad = d3' * a2; %this multiplication of (a*m) X (m*p) is as summation over all m data points
 Theta1_grad = d2(:,2:end)' * a1;
 Theta1_grad = Theta1_grad/m;
 Theta2_grad = Theta2_grad/m;
