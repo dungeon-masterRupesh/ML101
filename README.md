@@ -13,6 +13,7 @@ a2 = [ones(size(z2,1), 1) sigmoid(z2)];
 %a3 == h
 h = sigmoid(a2 * Theta2');
 y_logic = zeros(m,size(Theta2,1));
+%% converting [1 2 1] to [1 0; 0 1; 1 0]. If anyone knows the matlab command to do so, Plz push your code.
 for i = 1:m
     y_logic(i,y(i))=1;
 end
