@@ -41,6 +41,8 @@ regularised(:,1) = 0;
 Theta1_grad = Theta1_grad + regularised1;
 Theta2_grad = Theta2_grad + regularised2;
 ```
+## ex5 -> Bias-variance tradeoff
+Basic implementation of balancing validation error by adding polynomial features and sampling for different values of lambda
 
 ## ex6 -> Svm along with kernels and spam filtering
 Email spam filtering given a dictionary using linear as well as Gaussian Kernels and applied algorithm to find most optimal parameters for the Gaussian kernels among a given set of possible parameters.
